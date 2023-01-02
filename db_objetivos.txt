@@ -1,0 +1,54 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+-- -----------------------------------------------------
+-- Schema db_objetivos
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `db_objetivos` DEFAULT CHARACTER SET utf8mb4 ;
+
+
+-- -----------------------------------------------------
+-- Table `db_objetivos`.`objetivos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_objetivos`.`objetivos` (
+  `id_objetivo` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre_objetivo` VARCHAR(100) NOT NULL,
+  `detalle_objetivo` VARCHAR(300) NOT NULL,
+  `estado` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id_objetivo`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 64
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `db_objetivos`.`persona`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_objetivos`.`persona` (
+  `id_persona` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre_apellido` VARCHAR(150) NOT NULL,
+  `dni` VARCHAR(10) NOT NULL,
+  `porcentaje` INT(100) NOT NULL,
+  PRIMARY KEY (`id_persona`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 11
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `db_objetivos`.`personaobjetivo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_objetivos`.`personaobjetivo` (
+  `persona_id_persona` INT(11) NOT NULL,
+  `objetivos_id_objetivo` INT(11) NOT NULL)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

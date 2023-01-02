@@ -1,0 +1,25 @@
+
+LOGIN ADMINISTRADOR Y USUARIO
+*error usted debe colocar su usuario y contraseña para poder iniciar sesion
+*sacar alert de login
+*hacer la parte de de olvido su contraseña
+
+INDEX USUARIO
+*si o si campo de url (((obligatorio)))
+*falta tilde en la descripción
+*falta tilde en la sesión de usuario ((sesion))
+*cambiar boton editar por guardar en editar nota y editar nota debe ser 
+ cambiado por editar tarjeta
+*nueva nota cambia a nueva tarjeta (crear tarjeta)
+*agregar al usuario comun la posibilidad de recuperar contraseña
+
+REGISTRO USUARIO
+*modificar alerta del usuario que diga "por lo menos tres caracteres"
+*mail inválido
+*la contraseña debe contener por lo menos 6 carceteres
+
+ADMINISTRACION CREAR USUARIO
+*el administrador debe registar la longitud de la password
+
+OPCIONALES
+campo requerido -> debe ingresar su nombre (REGISTRO)
